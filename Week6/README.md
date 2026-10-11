@@ -4,16 +4,18 @@ This folder contains my lecture notes and Python code examples from Week 6 of Ha
 
 ## Topics Covered
 
-* File input and output
-* Reading files with `open()` and `read()`
-* Writing files with `write()`
-* Working with CSV files
-* Handling file paths and file operations
+* Unit testing
+* Writing test functions
+* Using `assert`
+* Testing with `pytest`
+* Test-driven development concepts
+* Identifying and debugging errors
+* Testing edge cases
 
 ## Purpose
 
-These files document my learning progress and practical experience with Python programming through CS50P.
+These files document my learning progress and practical experience with testing Python programs to improve reliability and correctness.
 
-**Course:** [CS50P — Introduction to Programming with Python](https://cs50.harvard.edu/python/)
+**Course:** CS50P — Introduction to Programming with Python
 **Institution:** Harvard University
 
