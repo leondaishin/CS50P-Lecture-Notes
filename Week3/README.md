@@ -4,15 +4,17 @@ This folder contains my lecture notes and Python code examples from Week 3 of Ha
 
 ## Topics Covered
 
-* Exceptions
-* Handling errors with `try` and `except`
-* Raising exceptions with `raise`
-* Input validation and error handling
+* Loops
+* `while` loops
+* `for` loops
+* `range()`
+* Iteration
+* Nested loops
+* Controlling loop execution
 
 ## Purpose
 
-These files document my learning progress and practical experience with Python programming through CS50P.
+These files document my learning progress and practical experience with repetition, iteration, and loops in Python.
 
-**Course:** [CS50P — Introduction to Programming with Python](https://cs50.harvard.edu/python/)
+**Course:** CS50P — Introduction to Programming with Python
 **Institution:** Harvard University
-
