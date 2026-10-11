@@ -4,16 +4,18 @@ This folder contains my lecture notes and Python code examples from Week 5 of Ha
 
 ## Topics Covered
 
-* Unit testing
-* Testing functions with `assert`
-* Using `pytest`
-* Writing test functions
-* Identifying and fixing bugs
+* Python libraries
+* Importing modules
+* Using external libraries
+* Randomness with `random`
+* Command-line arguments
+* Working with system-related functionality
+* Installing and using packages
 
 ## Purpose
 
-These files document my learning progress and practical experience with Python programming through CS50P.
+These files document my learning progress and practical experience with Python modules, libraries, and reusable functionality.
 
-**Course:** [CS50P — Introduction to Programming with Python](https://cs50.harvard.edu/python/)
+**Course:** CS50P — Introduction to Programming with Python
 **Institution:** Harvard University
 
