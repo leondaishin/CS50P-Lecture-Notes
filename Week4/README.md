@@ -4,16 +4,18 @@ This folder contains my lecture notes and Python code examples from Week 4 of Ha
 
 ## Topics Covered
 
-* Libraries
-* Importing modules with `import`
-* Using functions from Python libraries
-* Random numbers and the `random` module
-* Command-line arguments and working with external modules
+* Exceptions
+* Error handling
+* `try` and `except`
+* `else` and `finally`
+* Raising exceptions with `raise`
+* Input validation
+* Handling invalid user input
 
 ## Purpose
 
-These files document my learning progress and practical experience with Python programming through CS50P.
+These files document my learning progress and practical experience with error handling and writing more robust Python programs.
 
-**Course:** [CS50P — Introduction to Programming with Python](https://cs50.harvard.edu/python/)
+**Course:** CS50P — Introduction to Programming with Python
 **Institution:** Harvard University
 
