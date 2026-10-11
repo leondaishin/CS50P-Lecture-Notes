@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""
+Generate a simple animated cat GIF using Pillow.
+
+Save this script anywhere and run it. It will create 'cat_animation.gif'.
+"""
+from PIL import Image, ImageDraw
+
+def draw_cat(frame, tail_angle):
+	w, h = 400, 300
+	img = Image.new('RGBA', (w, h), (255, 255, 255, 0))
+	d = ImageDraw.Draw(img)
+
+	# body
+	d.ellipse((120, 120, 280, 210), fill=(200, 160, 120), outline=(0,0,0))
+	# head
+	d.ellipse((70, 70, 170, 150), fill=(200,160,120), outline=(0,0,0))
+	# ears
+	d.polygon([(80,85),(95,60),(110,85)], fill=(200,160,120), outline=(0,0,0))
+	d.polygon([(130,85),(145,60),(160,85)], fill=(200,160,120), outline=(0,0,0))
+	# eyes
+	d.ellipse((95,95,110,110), fill=(0,0,0))
+	d.ellipse((130,95,145,110), fill=(0,0,0))
+	# nose
+	d.polygon([(120,115),(115,125),(125,125)], fill=(255,100,100))
+	# mouth
+	d.arc((110,120,130,140), 0, 180, fill=(0,0,0))
+
+	# tail — simple rotated rectangle via polygon points
+	base_x, base_y = 280, 150
+	length = 90
+	import math
+	angle = math.radians(tail_angle)
+	dx = math.cos(angle) * length
+	dy = math.sin(angle) * length
+	tail_w = 12
+	# perpendicular offset
+	perp_x = -math.sin(angle) * tail_w
+	perp_y = math.cos(angle) * tail_w
+	p1 = (base_x + perp_x, base_y + perp_y)
+	p2 = (base_x - perp_x, base_y - perp_y)
+	p3 = (base_x + dx - perp_x, base_y + dy - perp_y)
+	p4 = (base_x + dx + perp_x, base_y + dy + perp_y)
+	d.polygon([p1,p2,p3,p4], fill=(200,160,120), outline=(0,0,0))
+
+	# frame number as watermark
+	d.text((10, 10), f"Frame {frame}", fill=(0,0,0))
+	return img
+
+def make_animation(path='cat_animation.gif', frames=16):
+	imgs = []
+	for i in range(frames):
+		# tail wags between -40 and 40 degrees
+		angle = -40 + (80 * (i / (frames - 1)))
+		img = draw_cat(i+1, angle)
+		imgs.append(img.convert('P', palette=Image.ADAPTIVE))
+	imgs[0].save(path, save_all=True, append_images=imgs[1:], duration=80, loop=0, disposal=2)
+	print(f"Saved animation to {path}")
+
+if __name__ == '__main__':
+	make_animation()
