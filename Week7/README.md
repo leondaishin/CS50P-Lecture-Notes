@@ -4,16 +4,17 @@ This folder contains my lecture notes and Python code examples from Week 7 of Ha
 
 ## Topics Covered
 
-* Regular expressions (regex)
-* Pattern matching in strings
-* Using Python's `re` module
-* Searching and validating text with regular expressions
-* Extracting information from strings
+* File input and output
+* Opening and closing files
+* Reading and writing files
+* Using `open()`
+* Working with CSV files
+* Reading structured data
+* Processing file contents
 
 ## Purpose
 
-These files document my learning progress and practical experience with Python programming through CS50P.
+These files document my learning progress and practical experience with reading, writing, and processing data in Python.
 
-**Course:** [CS50P — Introduction to Programming with Python](https://cs50.harvard.edu/python/)
+**Course:** CS50P — Introduction to Programming with Python
 **Institution:** Harvard University
-
